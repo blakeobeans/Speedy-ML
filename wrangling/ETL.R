@@ -1,0 +1,5 @@
+setwd("data")
+claim_data <- read.csv("Claim_Data.csv")
+predictors <- read.csv("Predictor Dataset.csv")
+sub_loss <- read.csv("Subsequent_Loss_Experience.csv")
+setwd("..")

@@ -1,0 +1,16 @@
+Tree-based models consist of one or more nested if-then statements for the predictors that partition the data.
+
+Because of the logic of their construction, they can effectively handle many types of predictors (sparse, skewed, continuous, categorical, etc.) without the need to pre-process them.
+
+Furthermore, these models can effectively handle missing data and implicitly conduct feature selection, characteristics that are desirable for many real-life modeling problems.
+
+Models based on single trees or rules, however, do have particular weaknesses. Two well-known weaknesses are (1) model instability (i.e., slight changes in the data can drastically change the structure of the tree or rules and, hence, the interpretation) and (2) less-than-optimal predictive performance. The latter is due to the fact that these models define rectangular regions that contain more homogeneous outcome values. If the relationship between predictors and the response cannot be adequately defined by rectangular subspaces of the predictors, then tree-based or rule-based models will have larger prediction error than other kinds of models.
+
+To combat these problems, researchers developed ensemble methods that combine many trees (or rule-based models) into one model.
+
+Basic regression trees partition the data into smaller groups that are more
+homogenous with respect to the response. To achieve outcome homogeneity,
+regression trees determine:
+. The predictor to split on and value of the split
+. The depth or complexity of the tree
+. The prediction equation in the terminal nodes
